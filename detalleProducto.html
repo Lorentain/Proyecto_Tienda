@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <ul class="header__menu">
+            <div class="menu__barras">
+                <div><span class="barra" id="barra1"></span></div>
+                <div><span class="barra" id="barra2"></span></div>
+                <div><span class="barra" id="barra3"></span></div>
+            </div>
+
+            <div class="menu__normal">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./ropaMujer.html">Ropa Mujer</a></li>
+                <li><a href="./ropaHombre.html">Ropa Hombre</a></li>
+                <li><a href="./joyeria.html">Joyeria</a></li>
+            </div>
+        </ul>
+
+        <div class="header__titulo">
+           <a href="./index.html"><h1>Tienda Lorenzo</h1></a>
+        </div>
+
+        <div class="menu__login">
+            <a href="./login.html"><button type="button" class="menu__boton">Login</button></a>
+            <a href="./carrito.html"><i class='bx bxs-cart bx-tada'></i></a>
+        </div>
+    </header>
+
+    <main class="detalle-producto">
+        <div class="producto__imagen">
+            <div class="contenedor-imagen"><img src="./assets/camiseta_mujer.png"></div>
+            <div class="contenedor-imagen"><img src="./assets/camiseta_mujer.png"></div>
+        </div>
+
+        <div class="producto__detalle">
+            <h1>Camiseta Mujer Rosa</h1>
+            <p>5,50€</p>
+            <select>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <input type="submit" value="Añadir al Carrito">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer__ayuda">
+            <h2>Ayuda</h2>
+            <a href="#">Contacto</a>
+            <a href="#">Preguntas</a>
+        </div>
+        <div class="footer__nosotros">
+            <h2>Nosotros</h2>
+            <a href="#">¿Quienes Somos?</a>
+            <a href="#">¿Donde encontrarnos?</a>
+        </div>
+        <div class="footer__legal">
+            <h2>Legal</h2>
+            <a href="#">Politica y privacidad</a>
+            <a href="#">Politica de reembolso</a>
+        </div>
+        <div class="footer__pago">
+            <h2>Métodos de pago</h2>
+            <i class='bx bxl-paypal'></i>
+            <i class='bx bxs-credit-card-alt'></i>
+            <i class='bx bxl-mastercard'></i>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

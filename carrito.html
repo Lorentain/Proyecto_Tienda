@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <ul class="header__menu">
+            <div class="menu__barras">
+                <div><span class="barra" id="barra1"></span></div>
+                <div><span class="barra" id="barra2"></span></div>
+                <div><span class="barra" id="barra3"></span></div>
+            </div>
+
+            <div class="menu__normal">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./ropaMujer.html">Ropa Mujer</a></li>
+                <li><a href="./ropaHombre.html">Ropa Hombre</a></li>
+                <li><a href="./joyeria.html">Joyeria</a></li>
+            </div>
+        </ul>
+
+        <div class="header__titulo">
+           <a href="./index.html"><h1>Tienda Lorenzo</h1></a>
+        </div>
+
+        <div class="menu__login">
+            <a href="./login.html"><button type="button" class="menu__boton">Login</button></a>
+            <a href="./carrito.html"><i class='bx bxs-cart bx-tada'></i></a>
+        </div>
+    </header>
+
+    <main class="carrito">
+        <div class="carrito__producto">
+            <div class="carrito-img">
+                <img src="./assets/anillo.png">
+            </div>
+            <div class="carrito-main">
+                <h1>Anillo de Oro</h1>
+                <p>Descripción: Este anillo bañado en oro con una gran calidad es lo mejor para regalar a tu pareja o 
+                    cualquier familiar que lo necesite. 
+                </p>
+                <p>Talla: N/A</p>
+                <p>Precio: 60€</p>
+                <p>Cantidad: 1</p>
+            </div>
+        </div>
+
+        <div class="carrito__producto">
+            <div class="carrito-img">
+                <img src="./assets/zapatillas_mujer.png">
+            </div>
+            <div class="carrito-main">
+                <h1>Zapatillas Running Rosa</h1>
+                <p>Descripción: Zapatillas de correr de color rosa, ideal para salir a correr o hacer andadas de largo tiempo.
+                </p>
+                <p>Talla: 38</p>
+                <p>Precio: 39€</p>
+                <p>Cantidad: 2</p>
+            </div>
+        </div>
+
+        <div class="carrito__total">
+            <h3>Gastos de Envío: 4,99€</h3>
+            <h3>Total: 142,99</h3>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer__ayuda">
+            <h3>Ayuda</h3>
+            <a href="#">Contacto</a>
+            <a href="#">Preguntas</a>
+        </div>
+        <div class="footer__nosotros">
+            <h3>Nosotros</h3>
+            <a href="#">¿Quienes Somos?</a>
+            <a href="#">¿Donde encontrarnos?</a>
+        </div>
+        <div class="footer__legal">
+            <h3>Legal</h3>
+            <a href="#">Politica y privacidad</a>
+            <a href="#">Politica de reembolso</a>
+        </div>
+        <div class="footer__pago">
+            <h3>Métodos de pago</h3>
+            <i class='bx bxl-paypal'></i>
+            <i class='bx bxs-credit-card-alt'></i>
+            <i class='bx bxl-mastercard'></i>
+        </div>
+    </footer>
+    
+</body>
+</html>
