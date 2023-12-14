@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+
+    min-height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    background-color: aqua;
+    padding: 20px 4%;
+    width: 100vw;
+    height: 15vh;
+}
+
+.header__titulo {
+    font-size: 1.5vw;
+}
+
+.header__titulo h1:hover {
+    transform: translateY(-5px);
+}
+
+.header__menu {
+    display: flex;
+}
+
+.header__menu li {
+    margin: 20px;
+}
+
+.header__menu li:hover {
+    transform: translateY(-10px);
+}
+
+.header__menu a {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.menu__normal {
+    display: none;
+}
+
+.menu__login {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ESTILOS DEL MENÚ ICONO CARRITO */
+
+.menu__login i {
+    font-size: 50px;
+    margin-left: 30px;
+    animation: rainbowAnimation ease-in-out 15s infinite;
+}
+
+@keyframes rainbowAnimation {
+    0%,100% {
+        color: red;
+    }
+    12% {
+        color: orange;
+    }
+    24% {
+        color: yellow;
+    }
+    36% {
+        color: green;
+    }
+    48% {
+        color: aqua;
+    }
+    60% {
+        color: blue;
+    }
+    74% {
+        color: pink;
+    }
+    87% {
+        color: violet;
+    }
+}
+
+.menu__login a {
+    color: black;
+}
+
+/* ESTILOS DEL MENÚ BOTON */
+
+.menu__boton{
+    padding: 15px 25px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: black;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+  
+.menu__boton:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+  
+.menu__boton:active {
+    transform: translateY(-1px);
+}
+
+.menu__boton a {
+    color: black;
+}
+
+.menu__boton a:hover {
+    color: white;
+}
+
+/* ESTILOS DEL MENÚ BARRAS */ 
+
+.menu__barras {
+    width: 5.5vw;
+    height: 6vh;
+}
+
+.header__menu:hover .menu__normal {
+    display: block;
+    position: fixed;
+    top: 15%;
+    left: 0;
+    background-color: blue
+}
+
+.header__menu:hover #barra1{
+    animation-name: animacionBarra1;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.header__menu:hover #barra2{
+    animation-name: animacionBarra2;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.header__menu:hover #barra3{
+    animation-name: animacionBarra3;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.header__menu:not(:hover) #barra1 {
+    animation-name: animacionBarra1Not;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.header__menu:not(:hover) #barra2 {
+    animation-name: animacionBarra2Not;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.header__menu:not(:hover) #barra3 {
+    animation-name: animacionBarra3Not;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.barra {
+    position: absolute;
+    content: '';
+    background-color: gray;
+    height: 4px;
+    width: 50px;
+}
+
+#barra2{
+    margin-top: 20px;
+}
+
+#barra3 {
+    margin-top: 40px;
+}
+
+
+@keyframes animacionBarra1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(240deg);
+    }
+}
+
+@keyframes animacionBarra2 {
+    0% {
+        opacity: 1;
+    }
+    
+    10% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animacionBarra3 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-240deg);
+    }
+}
+
+@keyframes animacionBarra1Not {
+    from {
+        transform: rotate(240deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes animacionBarra2Not {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+    
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animacionBarra3Not {
+    from {
+        transform: rotate(-240deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+main {
+    display: flex;
+    background-color: greenyellow;
+    width: 100vw;
+}
+
+.contenedor__slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    background-color: pink;
+}
+
+.slider {
+    margin: 20px;
+}
+
+.slider img {
+    width: 45vw;
+}
+
+.banner {
+    background-color: greenyellow;
+    width: 100vw;
+}
+
+.banner__titulo {
+    background-color: palevioletred;
+    width: 100%;
+}
+
+.banner__main {
+    display: flex;
+}
+
+.banner__main__img {
+    width: 40%;
+    padding: 10px;
+
+    background-color: red;
+}
+
+.banner__main__img img {
+    width: 100%;
+}
+
+.banner__main__parrafo {
+    background-color: rgb(245, 105, 105);
+    padding: 20px;
+    width: 60%;
+}
+
+.servicios {
+    display: flex;
+
+    background-color: darkmagenta;
+    width: 100vw;
+}
+
+.contenedor_cards {
+    display: flex;
+
+    width: 60vw;
+}
+
+.servicios__cards {
+    text-align: center;
+    background-color: yellow;
+    width: 20vw;
+    height: 60vh;
+    margin: 10px;
+}
+
+.contenedor__redes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    width: 40vw;
+}
+
+.redes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.redes i {
+    font-size: 50px;
+}
+
+.bxl-instagram {
+    color: brown;
+}
+
+.bxl-twitter {
+    color: aqua;
+}
+
+.bxl-youtube {
+    color: red;
+}
+
+.suscripcion__ofertas {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100vw;
+
+    background-color: greenyellow;
+    text-align: center;
+}
+
+#campoEmail {
+    width: 260px;
+    height: 25px;
+    border: 2px solid black;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+#enviar {
+    border: 2px solid black;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 5px black;
+}
+
+footer {
+    background-color: orange;
+    padding: 1rem;
+}
